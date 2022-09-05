@@ -1,40 +1,48 @@
-# React Truffle Box
+# Run ganache
 
-This box comes with everything you need to start using Truffle to write, compile, test, and deploy smart contracts, and interact with them from a React app.
-
-## Installation
-
-First ensure you are in an empty directory.
-
-Run the `unbox` command using 1 of 2 ways.
-
-```sh
-# Install Truffle globally and run `truffle unbox`
-$ npm install -g truffle
-$ truffle unbox react
+```
+ganache
 ```
 
-```sh
-# Alternatively, run `truffle unbox` via npx
-$ npx truffle unbox react
+
+# Deploy smart contract on development
+
+
+```
+cd truffle
+truffle migrate --network development
 ```
 
-Start the react dev server.
+# Start front end
 
-```sh
-$ cd client
-$ npm start
-  Starting the development server...
+```
+cd client
+npm run start
 ```
 
-From there, follow the instructions on the hosted React app. It will walk you through using Truffle and Ganache to deploy the `SimpleStorage` contract, making calls to it, and sending transactions to change the contract's state.
 
-## FAQ
+Available Accounts
+==================
+(0) 0x478DE59B4E03958F5C2368fEBD6fdF70581007bF (1000 ETH)
+(1) 0xe9c628334c39b83a9b8C82E5cA7C2050b8591556 (1000 ETH)
+(2) 0x0e22589118ca4ab741baCb42A46EC76b76fDd0B1 (1000 ETH)
+(3) 0xc37Ee4b0F43B86fCcb9F1F74122caC6766D42Bc9 (1000 ETH)
+(4) 0x3cde15D7FAc33322823a17aC55fDc6AF261C3eAE (1000 ETH)
+(5) 0xcF244204FFcf61779E1438Bd807a27D3a002f37f (1000 ETH)
+(6) 0x7A1fd41F55bec4cD91D1c668f5Ed01445eB484C7 (1000 ETH)
+(7) 0xC57Cd1f2e980ceCF4F72532A8Cf7568cdA8ab4EB (1000 ETH)
+(8) 0x9646740446206bF95EA81F735d3dcE0724F1A849 (1000 ETH)
+(9) 0xeFE107771C501c6dd5B4E2FFbf10712570Be5F8c (1000 ETH)
 
-- __How do I use this with Ganache (or any other network)?__
-
-  The Truffle project is set to deploy to Ganache by default. If you'd like to change this, it's as easy as modifying the Truffle config file! Check out [our documentation on adding network configurations](https://trufflesuite.com/docs/truffle/reference/configuration/#networks). From there, you can run `truffle migrate` pointed to another network, restart the React dev server, and see the change take place.
-
-- __Where can I find more resources?__
-
-  This Box is a sweet combo of [Truffle](https://trufflesuite.com) and [Create React App](https://create-react-app.dev). Either one would be a great place to start!
+Private Keys
+==================
+(0) 0xbc759226556e2e4852dbf0c2f36260546879ae31d212d6a09c76df5f11db98c6
+(1) 0x5d81a9d00a3f09d20b3e258c26806dcdae8b35682060ffd9c861bc7833c1e9f1
+(2) 0xcb6146eaaa189a35a9841a3fba59ee06f4a5d4ab760c27965998d71a593ca356
+(3) 0x44e4070482e248d481d4fc7daf28980bc5b9f68bba908222ba0613fc03ebe283
+(4) 0xc3f5bac1bc8478e5fac9939c9892b0630a9087b85e0a34cad5bdbb9c83c150e6
+(5) 0x8f11b10ff550f65281ca74675bf202fc98e33a2c66f2192fd781d34cab98ddf4
+(6) 0x0f5e8ab004c6a26362282e219400c45fb05f6372191056363b09ba4b7786407c
+(7) 0x0e556b1f7b17ef5f4de98863f16cad149dc4cd91dd8fede28bd5c4eb613722f2
+(8) 0xff0f37d40ec135e428e7f47c9cece7ab4705bd7f3feb4f517a9748ac0d486b73
+(9) 0xcd1423ae7428b92948472e9652ec090a2b937a83d77b64afdc9aa04c2d118e30
