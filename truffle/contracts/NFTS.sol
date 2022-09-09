@@ -9,21 +9,19 @@ contract NFTS is ERC1155 {
 
 
 
-    constructor() ERC1155("ipfs://bafkreifds27353i4bdh2uup4zsbv6eihj5szu4szic6vd4nkeagpzufj3y/{id}.json") {
+    constructor() ERC1155('ipfs://bafkreievlfq2775xac4qage6vkyzqrhp67jwx5ggatzbs6t2eagl7lgc4a') {
         for(uint i=1; i <2 ;i++) {
-            _mint(msg.sender, i, 1, bytes(abi.encodePacked("Amedee #", Strings.toString(i))));
+            _mint(msg.sender, i, 1, bytes(abi.encodePacked("Amedee number #", Strings.toString(i))));
         }
     }
 
-    function uri(uint _tokenId) override public view returns(string memory) {
+    function uri(uint _tokenId) override public pure returns(string memory) {
         return string(abi.encodePacked(
-                "ipfs://bafkreifds27353i4bdh2uup4zsbv6eihj5szu4szic6vd4nkeagpzufj3y/",
-                Strings.toString(_tokenId),
-                ".json"));
+                "ipfs://bafkreievlfq2775xac4qage6vkyzqrhp67jwx5ggatzbs6t2eagl7lgc4a"));
     }
 
-    function name() public returns(string memory) {
-        string memory name = "Amedee Collection";
-        return name;
+    function name() public pure returns(string memory) {
+        string memory collectionName = "Amedee Collection With One NFT";
+        return collectionName;
     }
 }

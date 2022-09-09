@@ -33,5 +33,7 @@ yarn-error.log*
 .idea
 
 # api key
-client/src/config.js
 client/assets
+
+truffle/.env
+client/.env
