@@ -9,6 +9,22 @@ import NoticeWrongNetwork from "./NoticeWrongNetwork";
 const { NFTStorage } = require("nft.storage/dist/bundle.esm.min.js");
 
 function Nft() {
+
+
+
+
+  /*
+  Uploader les fichiers d'image
+  recuperer le cid
+
+  Recuperer les json et mettre dedans l'uri des images
+
+  Uploader les JSON et recuperer le cid
+
+  Ensuite: modifier le NFTS contract avec le cid des json
+
+
+   */
   const { state } = useEth();
   const [value, setValue] = useState("?");
   const [file, setFile] = useState(null);
@@ -28,6 +44,7 @@ function Nft() {
 
   const retrieveFile = (e) => {
     console.log('retrieveFile');
+    console.log(e.target.files);
 
     const data = e.target.files[0];
 
@@ -76,7 +93,7 @@ function Nft() {
     <>
       <div>
         <form className="form" onSubmit={handleSubmit}>
-          <input type="file" name="data" onChange={retrieveFile} />
+          <input type="file" name="data" onChange={retrieveFile} multiple/>
           <button type="submit" className="btn">Upload file</button>
         </form>
       </div>
