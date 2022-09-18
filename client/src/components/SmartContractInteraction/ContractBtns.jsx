@@ -6,13 +6,12 @@ function ContractBtns({ setValue }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = e => {
-    if (/^\d+$|^$/.test(e.target.value)) {
       setInputValue(e.target.value);
-    }
+
   };
 
   const read = async () => {
-    const value = await contract.methods.read().call({ from: accounts[0] });
+    const value = await contract.methods.name().call({ from: accounts[0] });
     setValue(value);
   };
 
