@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {  View, Image } from 'react-native';
 
 import Title from "./Title";
 
 
-import getImages from "../../content/DataUtils";
+function IpfsImagesGallery({images}) {
 
-function Gallery() {
-    const [images, setImages] = useState([]);
 
-   // setImages(getImages());
-    useEffect(() => {
-        setImages(getImages());
-    }, []);
 
   return (
     <div className="demo">
@@ -25,7 +19,7 @@ function Gallery() {
                         return (
                             <div key={i} className="grid-item">
                                 <Image
-                                    source={{uri: image.src}}
+                                    source={{uri: image.path}}
                                     style={{width: 200, height: 200}}
                                 />
                             </div>
@@ -38,4 +32,4 @@ function Gallery() {
   );
 }
 
-export default Gallery;
+export default IpfsImagesGallery;

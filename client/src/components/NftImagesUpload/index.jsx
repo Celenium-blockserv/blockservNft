@@ -1,7 +1,7 @@
 import {useState} from "react";
 import Title from "./Title";
 import React from "react";
-import {Text, StyleSheet, TextInput, Image} from "react-native";
+import {Text, StyleSheet, TextInput} from "react-native";
 import Dropzone from "react-dropzone";
 
 const {NFTStorage} = require("nft.storage/dist/bundle.esm.min.js");
@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
     }
 });
 
-function NftImagesUpload() {
+function NftImagesUpload({setUploadedIpfsImagesList}) {
 
-    const [nftApiKey, onChangeNftApiKey] = useState("NFT Storage API Key");
+    const [nftApiKey, onChangeNftApiKey] = useState("");
     const [choosenNftImagesList, onChangeChoosenNftImagesList] = useState([]);
 
     let NFTStorageClient = {};
@@ -42,6 +42,16 @@ function NftImagesUpload() {
         const cid = await NFTStorageClient.storeDirectory(imagesToUpload);
         console.log(cid);
         console.log('https://' + cid + '.ipfs.nftstorage.link');
+
+        let ipfsImagesList = choosenNftImagesList.map(file => {
+            return {
+                'cid': cid,
+                path: 'https://' + cid + '.ipfs.nftstorage.link/' + file.path,
+                ipfs: 'ipfs://' + cid + '/' + file.path
+            }
+        })
+        console.log(ipfsImagesList);
+        setUploadedIpfsImagesList(ipfsImagesList);
 
     };
 
