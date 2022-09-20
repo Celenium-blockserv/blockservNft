@@ -24,7 +24,8 @@ function Main() {
 
     const setUploadedJsonFilesList = (childData) => {
         setJsonFilesList(childData);
-        console.log(jsonFilesList)
+        console.log('jsonFilesList');
+        console.log(childData);
     }
 
     return (
@@ -39,7 +40,7 @@ function Main() {
                     <hr/>
                     <NftJsonFilesUpload setUploadedJsonFilesList={setUploadedJsonFilesList} cid={cid}/>
                     <hr/>
-                    <SmartContractInteraction/>
+                    <SmartContractInteraction jsonFilesList={jsonFilesList}/>
                 </div>
     );
 }

@@ -5,17 +5,26 @@ import Contract from "./Contract";
 import ContractBtns from "./ContractBtns";
 import NoticeNoArtifact from "./NoticeNoArtifact";
 import NoticeWrongNetwork from "./NoticeWrongNetwork";
+import MintBatch from "./MintBatch";
+import MintBatchBtn from "./MintBatchBtn";
 
-function SmartContractInteraction() {
+function SmartContractInteraction({jsonFilesList}) {
   const { state } = useEth();
-  const [value, setValue] = useState("?");
+    const [collectionName, setCollectionName] = useState("?");
+    const [tokenIds, setTokenIds] = useState('No token ids');
 
   const demo =
     <>
       <div className="contract-container">
-        <Contract value={value} />
-        <ContractBtns setValue={setValue} />
+        <Contract collectionName={collectionName} />
+        <ContractBtns setCollectionName={setCollectionName} />
       </div>
+        <br/>
+        <div className="contract-container">
+            <MintBatch jsonFilesList={jsonFilesList} />
+            <MintBatchBtn jsonFilesList={jsonFilesList} setTokenIds={setTokenIds}/>
+        </div>
+        <div><strong>{tokenIds}</strong></div>
     </>;
 
   return (

@@ -53,7 +53,6 @@ function NftJsonFilesUpload({setUploadedJsonFilesList, cid}) {
             acceptedFiles.push(replacedContent);
         }
 
-        console.log('HERE')
         console.log(acceptedFiles)
         return acceptedFiles;
     }

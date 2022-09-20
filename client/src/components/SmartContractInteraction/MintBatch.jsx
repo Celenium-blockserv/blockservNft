@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-function Contract({ collectionName }) {
+function MintBatch({ jsonFilesList }) {
   const spanEle = useRef(null);
 
   useEffect(() => {
@@ -11,14 +11,14 @@ function Contract({ collectionName }) {
     return () => {
       clearTimeout(flash);
     };
-  }, [collectionName]);
+  }, [jsonFilesList]);
 
   return (
     <code>
-      {`Collection name = `}
+      {`File to mint: `}
 
       <span className="secondary-color" ref={spanEle}>
-        <strong>{collectionName}</strong>
+        <strong>{jsonFilesList.map(file => file.ipfs)}</strong>
       </span>
 
 
@@ -26,4 +26,4 @@ function Contract({ collectionName }) {
   );
 }
 
-export default Contract;
+export default MintBatch;
