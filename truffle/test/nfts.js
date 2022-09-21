@@ -5,7 +5,7 @@ contract('NFTS', (accounts) => {
     const NFTSInstance = await NFTS.deployed();
 
     let name = await NFTSInstance.name.call()
-    assert.equal(name, "Collection Of NFTs by Celenium", "Could not get collection name");
+    assert.equal(name, "BIG Collection Of NFTs by Celenium", "Could not get collection name");
 
   });
     it('should mint and get uri', async() => {

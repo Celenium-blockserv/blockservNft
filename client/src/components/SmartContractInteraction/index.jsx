@@ -8,7 +8,7 @@ import NoticeWrongNetwork from "./NoticeWrongNetwork";
 import MintBatch from "./MintBatch";
 import MintBatchBtn from "./MintBatchBtn";
 
-function SmartContractInteraction({jsonFilesList}) {
+function SmartContractInteraction({jsonFilesList, employeesList}) {
   const { state } = useEth();
     const [collectionName, setCollectionName] = useState("?");
     const [tokenIds, setTokenIds] = useState('No token ids');
@@ -22,7 +22,7 @@ function SmartContractInteraction({jsonFilesList}) {
         <br/>
         <div className="contract-container">
             <MintBatch jsonFilesList={jsonFilesList} />
-            <MintBatchBtn jsonFilesList={jsonFilesList} setTokenIds={setTokenIds}/>
+            <MintBatchBtn jsonFilesList={jsonFilesList} setTokenIds={setTokenIds} employeesList={employeesList}/>
         </div>
         <div><strong>{tokenIds}</strong></div>
     </>;
