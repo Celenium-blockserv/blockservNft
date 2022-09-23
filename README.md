@@ -20,4 +20,4 @@ cd client
 npm run start
 ```
 
-
+"https://celenium-blockserv.github.io/blockservNft/"

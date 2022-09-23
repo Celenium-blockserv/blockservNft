@@ -10,6 +10,7 @@ import React from 'react';
 import {useState} from "react";
 
 function Main() {
+
     const [cid, setCid] = useState("");
     const [ipfsImagesList, setIpfsImagesList] = useState([]);
     const [jsonFilesList, setJsonFilesList] = useState([]);

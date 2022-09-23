@@ -47,6 +47,10 @@ contract NFTS is ERC1155Burnable, Ownable {
         return "BIG Collection Of NFTs by Celenium";
     }
 
+    function lastId() public view returns (uint256 ) {
+        return _tokenIds.current();
+    }
+
 }
 
 

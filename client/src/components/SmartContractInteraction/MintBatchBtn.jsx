@@ -1,9 +1,11 @@
 import {useEffect, useState} from "react";
 import useEth from "../../contexts/EthContext/useEth";
 
-function MintBachBtns({ jsonFilesList, setTokenIds , employeesList}) {
+function MintBachBtns({ jsonFilesList,  employeesList}) {
   const { state: { contract, accounts } } = useEth();
   const [ipfsJsonFilesList, setIpfsJsonFilesList] = useState([]);
+
+
 
   useEffect(() => {
    setIpfsJsonFilesList(jsonFilesList.map(file => file.ipfs))
@@ -15,8 +17,8 @@ function MintBachBtns({ jsonFilesList, setTokenIds , employeesList}) {
       for(let i=0;i<ipfsJsonFilesList.length;i++){
           recipients[i]=employeesList[i].address;
       }
-    const tokenIds = await contract.methods.batchMint(recipients, ipfsJsonFilesList,).send( { from: accounts[0] });
-    setTokenIds(tokenIds);
+    await contract.methods.batchMint(recipients, ipfsJsonFilesList,).send( { from: accounts[0] });
+
   };
 
 

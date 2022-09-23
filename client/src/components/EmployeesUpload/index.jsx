@@ -78,7 +78,7 @@ function EmployeesUpload({setUploadedEmployeesList}) {
                 </Dropzone>
                 {selectedFile.path}
             </div>
-            <div className="center-col">
+            <div className="scroll">
             <ul>
                 {
                     employeesList.map((employee) => (

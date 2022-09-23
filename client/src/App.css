@@ -15,11 +15,11 @@
   --dark-gray: #777;
 }
 
-.center-col {
+.scroll{
   flex: 1;
-  background: #aaa;
+  background: var(--light-gray);
   overflow-y: scroll;
-  height: 100vh;
+  height: 20vh;
 }
 
 .grid-container {
