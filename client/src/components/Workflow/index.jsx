@@ -1,35 +1,23 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
+import Title from "./Title";
 
 const styles = StyleSheet.create({
     baseText: {
-        fontFamily: "Arial"
+        fontFamily: "Montserrat, sans-serif"
     },
-    titleText: {
-        fontSize: 30,
-        fontWeight: "bold"
-    }
 });
 function Workflow() {
-
-  return (
+  return (<>
+      <Title />
           <Text style={styles.baseText}>
-              <Text style={styles.titleText}>
-                  Workflow
+                  This page gives you acces to your NFT collection.
                   {"\n"}
+                  In the Gallery, you can see all NFTs that are already part of the collection.
                   {"\n"}
-              </Text>
-              <Text numberOfLines={6}>
-                  Uploader les fichiers d'image
-                  {"\n"}
-                  Recuperer le cid
-                  {"\n"}
-                  Recuperer les json et mettre dedans l'uri des images
-                  {"\n"}
-                  Uploader les JSON et recuperer le cid
-                  {"\n"}
-                  Ensuite: modifier le NFTS contract avec le cid des json</Text>
+                  Other paragraphs gives you the opportunity to add more NFTs to this collection
           </Text>
+  </>
   );
 }
 

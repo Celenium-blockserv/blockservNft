@@ -1,19 +1,92 @@
+body {
+  margin-top: 40px;
 
+}
 
 #App {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+
+  /* Couleurs avec du texte noir */
+  --fond-blanc: #ffffff;
+  --fond-gris-clair: #F4F5F8;
+  --fond-bleu-faisan: #05BEFA;
+  --fond-bleu-emeraude: #18D9C9;
+  --fond-corail: #FF666B;
+  --fond-ocre: #FBA11B;
+
+  /* Couleurs avec du texte blanc */
+  --fond-noir: #1F1F1F;
+  --fond-gris-fonce: #32303A;
+  --fond-gris: #6E6E6E;
+  --fond-rouge: #E30613;
+  --fond-violet: #7A35B4;
+  --fond-bleu: #1E46A0;
+  --fond-vert: #006462;
+  --text-gris: #6e6e6e;
+
   font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--fond-blanc);
+
+
   --primary-color: #1266cc;
   --secondary-color: #f96400;
   --flash-color: rgb(89, 255, 0);
   --gray: #999;
   --light-gray: #e0e0e0;
   --dark-gray: #777;
+
+  /* CSS HEX */
+  --bistre: #251605ff;             /* black : background */
+  --deep-jungle-green: #1c5253ff;
+  --turquoise-green: #b3d2b2ff;    /* clair  */
+  --cultured: #f6f3f4ff;           /* wite  */
+  --sinopia: #c73e1dff;            /* red   */
+
 }
+
+.header {
+  width: 100%;
+  height: 200px;
+  background-color: var(--fond-gris-clair);
+
+}
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+.header h2 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+  color: var(--text-gris);
+
+}
+
+#App .container {
+  width: 95%;
+  min-width: 60rem;
+  height: 100%;
+}
+
+
 
 .scroll{
   flex: 1;
@@ -37,12 +110,7 @@
 
 
 
-#App .container {
-  width: 80%;
-  min-width: 60rem;
-  max-width: 750rem;
-  height: 100%;
-}
+
 
 code {
   display: block;

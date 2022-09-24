@@ -34,3 +34,5 @@ const getImages = () => {
 }
 
 export default getImages;
+
+// tokenURI.replace("ipfs://", "https://ipfs.io/ipfs/");
