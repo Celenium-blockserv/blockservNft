@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/blockservNft/static/css/main.923a7031.chunk.css",
-    "main.js": "/blockservNft/static/js/main.10e5c2e7.chunk.js",
-    "main.js.map": "/blockservNft/static/js/main.10e5c2e7.chunk.js.map",
+    "main.css": "/blockservNft/static/css/main.c33334b5.chunk.css",
+    "main.js": "/blockservNft/static/js/main.7b8d0649.chunk.js",
+    "main.js.map": "/blockservNft/static/js/main.7b8d0649.chunk.js.map",
     "runtime-main.js": "/blockservNft/static/js/runtime-main.475e8d03.js",
     "runtime-main.js.map": "/blockservNft/static/js/runtime-main.475e8d03.js.map",
-    "static/js/2.9027cb1e.chunk.js": "/blockservNft/static/js/2.9027cb1e.chunk.js",
-    "static/js/2.9027cb1e.chunk.js.map": "/blockservNft/static/js/2.9027cb1e.chunk.js.map",
+    "static/js/2.5f56227c.chunk.js": "/blockservNft/static/js/2.5f56227c.chunk.js",
+    "static/js/2.5f56227c.chunk.js.map": "/blockservNft/static/js/2.5f56227c.chunk.js.map",
     "index.html": "/blockservNft/index.html",
-    "static/css/main.923a7031.chunk.css.map": "/blockservNft/static/css/main.923a7031.chunk.css.map",
-    "static/js/2.9027cb1e.chunk.js.LICENSE.txt": "/blockservNft/static/js/2.9027cb1e.chunk.js.LICENSE.txt"
+    "static/css/main.c33334b5.chunk.css.map": "/blockservNft/static/css/main.c33334b5.chunk.css.map",
+    "static/js/2.5f56227c.chunk.js.LICENSE.txt": "/blockservNft/static/js/2.5f56227c.chunk.js.LICENSE.txt",
+    "static/media/loading_icon.1a32f552.gif": "/blockservNft/static/media/loading_icon.1a32f552.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.475e8d03.js",
-    "static/js/2.9027cb1e.chunk.js",
-    "static/css/main.923a7031.chunk.css",
-    "static/js/main.10e5c2e7.chunk.js"
+    "static/js/2.5f56227c.chunk.js",
+    "static/css/main.c33334b5.chunk.css",
+    "static/js/main.7b8d0649.chunk.js"
   ]
 }
